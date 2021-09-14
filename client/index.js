@@ -8,9 +8,9 @@ import '../public/style.css'
 
 ReactDOM.render(
   <BrowserRouter>
-  <Provider store={store}>
-    <App />
-  </Provider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </BrowserRouter>,
   document.getElementById('app')
 )
