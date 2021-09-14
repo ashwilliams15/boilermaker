@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { authenticate } from '../store/auth';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 
 
 const AuthForm = props => {
@@ -54,16 +54,15 @@ const mapSignup = state => {
   }
 }
 
-const mapDispatch = dispatch => {
+const mapDispatch = (dispatch, { history }) => {
   return {
     handleSubmit(evt) {
-      console.log('login handle submit')
       evt.preventDefault()
       const formName = evt.target.name
       const username = evt.target.username.value
       const password = evt.target.password.value
-      console.log(username, password, formName)
       dispatch(authenticate(username, password, formName))
+      history.push("/home")
     }
   }
 }
