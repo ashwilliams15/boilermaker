@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
     "start-dev": "npm run start-server & npm run build-dev",
     "start-server": "JWT=pizza nodemon main.js -e html,js,css --ignore public",
     "build-dev": "webpack -w",
