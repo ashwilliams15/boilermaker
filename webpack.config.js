@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'development',
   entry: ["regenerator-runtime/runtime.js",
     './client/index.js'
   ],

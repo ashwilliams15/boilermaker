@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server",
     "start-dev": "npm run start-server & npm run build-dev",
-    "start-server": "JWT=pizza nodemon main.js -e html,js,css --ignore public",
-    "build-dev": "webpack -w",
+    "start-server": "JWT=pizza nodemon server -e html,js,scss --ignore public --ignore client",
+    "build-dev": "webpack -w --mode=development",
     "seed": "node seed.js",
     "test": "mocha ./tests/*.spec.js --compilers js:babel-register"
   },
