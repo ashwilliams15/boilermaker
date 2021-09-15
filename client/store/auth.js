@@ -11,7 +11,7 @@ const _setAuth = (auth) => {
     type: SET_AUTH,
     auth
   }
-}
+};
 
 export const me = () => async dispatch => {
   const token = window.localStorage.getItem(TOKEN)
@@ -24,7 +24,7 @@ export const me = () => async dispatch => {
     })
     return dispatch(_setAuth(res.data))
   }
-}
+};
 
 export const authenticate = (username, password, method) => async dispatch => {
   try {
@@ -36,7 +36,7 @@ export const authenticate = (username, password, method) => async dispatch => {
   } catch (authError) {
     return dispatch(_setAuth({error: authError}))
   }
-}
+};
 
 export const logout = () => {
   window.localStorage.removeItem(TOKEN)
@@ -45,7 +45,7 @@ export const logout = () => {
     type: SET_AUTH,
     auth: {}
   }
-}
+};
 
 export default function(state={}, action) {
   switch (action.type) {
@@ -54,4 +54,4 @@ export default function(state={}, action) {
     default:
       return state
   }
-}
+};
