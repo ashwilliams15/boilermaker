@@ -10,11 +10,11 @@ const seed = async () => {
     const ingredient1 = await Ingredient.create({
       itemName: 'flour'
     })
-    // const user1 = await User.create({
-    //   id: 1,
-    //   username: 'Preston',
-    //   password: 'fun'
-    // })
+    const user1 = await User.create({
+      id: 1,
+      username: 'Preston',
+      password: 'fun'
+    })
   } catch (err) {
     console.log(red(err));
   }
